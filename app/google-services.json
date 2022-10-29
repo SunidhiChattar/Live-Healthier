@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "631668598847",
+    "project_id": "live-healthier",
+    "storage_bucket": "live-healthier.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631668598847:android:b6286361158b7d5e1bf08a",
+        "android_client_info": {
+          "package_name": "com.verzeo.medicinemajorproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "631668598847-1vhv0afhe6gv2josuu3reg4lp7l36uqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYfsyre2b2cKnSzvSWCuM7ABILcyQzXXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "631668598847-1vhv0afhe6gv2josuu3reg4lp7l36uqu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
