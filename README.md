@@ -1,5 +1,5 @@
 # Live-Healthier
-Live-Healthier gives medication reminders, it has a feature to schedule your doses and remined you by dropping a notification.
+Live-Healthier gives medication reminders, it has a feature to schedule your doses and remind you by dropping a notification.
 ![worryless](https://user-images.githubusercontent.com/85549700/198847828-23a4a3f3-8596-4be0-8399-6512d14c68e7.jpg)
 ![mainscreen](https://user-images.githubusercontent.com/85549700/198847829-c12557d3-7aee-401e-8079-5253037f6001.jpg)
 ![adddoses](https://user-images.githubusercontent.com/85549700/198847835-d15f4227-694f-4ae3-bbb8-d3ed2b74fde4.jpg)
