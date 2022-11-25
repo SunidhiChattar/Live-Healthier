@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "631668598847",
-    "project_id": "live-healthier",
-    "storage_bucket": "live-healthier.appspot.com"
+    "project_number": "1023600421533",
+    "firebase_url": "https://healthcare-85bf7-default-rtdb.firebaseio.com",
+    "project_id": "healthcare-85bf7",
+    "storage_bucket": "healthcare-85bf7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:631668598847:android:b6286361158b7d5e1bf08a",
+        "mobilesdk_app_id": "1:1023600421533:android:a5a4aff79a72cfaf468274",
         "android_client_info": {
           "package_name": "com.verzeo.medicinemajorproject"
         }
       },
       "oauth_client": [
         {
-          "client_id": "631668598847-1vhv0afhe6gv2josuu3reg4lp7l36uqu.apps.googleusercontent.com",
+          "client_id": "1023600421533-dbdf91p4624egkdf3lpqngrlfvg4fiet.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCYfsyre2b2cKnSzvSWCuM7ABILcyQzXXk"
+          "current_key": "AIzaSyDszt0YyKkTROx_DCNARsJAssrdKQ6zqbA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "631668598847-1vhv0afhe6gv2josuu3reg4lp7l36uqu.apps.googleusercontent.com",
+              "client_id": "1023600421533-dbdf91p4624egkdf3lpqngrlfvg4fiet.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,5 +1,6 @@
 package com.verzeo.medicinemajorproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -25,8 +26,13 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.BreakIterator;
 import java.text.ParseException;
@@ -51,6 +57,8 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
+//    private FirebaseAuth fauth;
+//    private FirebaseUser fUser;
 
 
 
@@ -63,6 +71,8 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_main3);
 
 
+//        fauth = FirebaseAuth.getInstance();
+//        fUser = fauth.getCurrentUser();
 
 
         t1 = findViewById(R.id.time);
@@ -196,9 +206,13 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("Medicine");
 
+
                 UserHelperClass helperClass= new UserHelperClass(name,dose,date,time);
 
-                reference.child(name).setValue(helperClass);
+                reference.child("User").setValue(helperClass);
+
+
+
             }
         }
         );

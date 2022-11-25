@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -39,6 +40,8 @@ public class MainActivity2 extends AppCompatActivity {
     DatabaseReference database;
     Medicinelist medicinelist;
     ArrayList<UserHelperClass> list;
+
+
 
 
 
