@@ -15,7 +15,9 @@ import android.widget.TextView;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-public class AlarmReceiver extends BroadcastReceiver {
+import javax.annotation.Nullable;
+
+public class  AlarmReceiver extends BroadcastReceiver {
     private static final String CHANNEL_ID = "SAMPLE_CHANNEL";
 
     @Override
@@ -28,6 +30,8 @@ public class AlarmReceiver extends BroadcastReceiver {
         Intent i = new Intent(context, MainActivity2.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(context,0,i,0);
+        PendingIntent pendingIntent1 = null;
+        PendingIntent pendingIntent2 = null;
 
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
@@ -45,7 +49,10 @@ public class AlarmReceiver extends BroadcastReceiver {
                 .setContentText(date)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setContentIntent(pendingIntent)
-                .setAutoCancel(true);
+                .setAutoCancel(true)
+                .addAction(R.drawable.ic_launcher_foreground,"Yes", pendingIntent1)
+                .addAction(R.drawable.ic_launcher_foreground , "No" ,pendingIntent2);
+        
 
         NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(context);
         notificationManagerCompat.notify(notificationId,builder.build());
