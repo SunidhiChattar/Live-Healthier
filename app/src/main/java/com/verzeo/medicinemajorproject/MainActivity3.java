@@ -57,7 +57,7 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
-//    private FirebaseAuth fauth;
+    private FirebaseAuth fauth;
 //    private FirebaseUser fUser;
 
 
@@ -71,7 +71,7 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_main3);
 
 
-//        fauth = FirebaseAuth.getInstance();
+        fauth = FirebaseAuth.getInstance();
 //        fUser = fauth.getCurrentUser();
 
 
@@ -157,10 +157,11 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
             @Override
             public void onClick(View view) {
 
-                String date = d1.getText().toString().trim();
-                String time = t1.getText().toString().trim();
+
                 String name = nam.getText().toString().trim();
                 String dose = dos.getText().toString().trim();
+                String date = d1.getText().toString().trim();
+                String time = t1.getText().toString().trim();
                 {
                     AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
                     Intent intent = new Intent(getApplicationContext(), AlarmReceiver.class);
@@ -203,13 +204,14 @@ public class MainActivity3 extends AppCompatActivity implements View.OnClickList
                     }
 
                 }
+
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("Medicine");
 
 
                 UserHelperClass helperClass= new UserHelperClass(name,dose,date,time);
 
-                reference.child("User").setValue(helperClass);
+                reference.child(fauth.getCurrentUser().getUid()).setValue(helperClass);
 
 
 

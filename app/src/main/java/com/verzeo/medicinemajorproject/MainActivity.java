@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                    Intent intent = new Intent(MainActivity.this, login_page.class);
                     startActivity(intent);
                     finish();
-                    Toast.makeText(MainActivity.this, "made with ♥ by Sunidhi", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(MainActivity.this, "made with ♥ by Sunidhi", Toast.LENGTH_LONG).show();
                 }
             }, SPLASH_SCREEN);
 
