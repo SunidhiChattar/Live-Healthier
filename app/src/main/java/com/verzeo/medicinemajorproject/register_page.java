@@ -22,6 +22,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.regex.Pattern;
 
@@ -33,6 +34,7 @@ public class register_page extends AppCompatActivity {
     RadioButton radiobtnpgenderselected;
     RadioGroup radiogrpgender;
     ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,8 @@ public class register_page extends AppCompatActivity {
         attender = findViewById(R.id.attmail);
         name = findViewById(R.id.Fname);
         logbtn = findViewById(R.id.loginbtn);
+
+
 
         radiogrpgender = findViewById(R.id.radiobtn);
         radiogrpgender.clearCheck();
@@ -155,6 +159,8 @@ public class register_page extends AppCompatActivity {
                 if(task.isSuccessful()){
                     Toast.makeText(register_page.this, "User Registered successfully", Toast.LENGTH_SHORT).show();
                     FirebaseUser user = auth.getCurrentUser();
+
+
 
 
                     user.sendEmailVerification();
